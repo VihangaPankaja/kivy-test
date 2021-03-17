@@ -1,0 +1,53 @@
+<grid>
+	
+	text1: text1
+	text2: text2
+	lbl1: lbl1
+	btn: btn
+
+	GridLayout:
+		cols: 1
+		size: root.width, root.height
+		row_force_default: True
+		col_force_default: True
+		row_default_height: 200
+		col_default_width: 1200
+
+		GridLayout:
+			cols: 2
+			row_force_default: True
+			col_force_default: True
+			row_default_height: 100
+			col_default_width: 600
+
+			Label:
+				text: "Text Field 1"
+
+			TextInput:
+				id: text1
+				multiline: False
+
+			Label:
+				text: "Text Field 2"
+
+			TextInput:
+				id: text2
+				multiline: False
+		Button:
+			id: btn
+			text: "Play"
+			font_size: "32sp"
+			background_normal: ''
+			size_hint_y: None
+			height: 100
+			background_color: (136/255, 176/255, 75/255, 1)
+			color: (1,0,0,1)
+			border: (0,0,0,0)
+			on_press: root.press()
+			on_release: root.release()
+
+		Label:
+			id: lbl1
+			text: ""
+
+

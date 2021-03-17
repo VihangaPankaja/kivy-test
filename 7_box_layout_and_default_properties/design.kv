@@ -1,0 +1,39 @@
+#: import utils kivy.utils
+
+<Button>
+	font_size: "48sp"
+	background_normal: ''
+	background_color: utils.get_color_from_hex('#feb236')
+	bold: True
+	color: utils.get_color_from_hex('#d64161')
+
+<TextInput>
+	text: ""
+	font_size: "24sp"
+	background_color: utils.get_color_from_hex('#d5e1df')
+	color: utils.get_color_from_hex('#3e4444')
+	multiline: False
+
+<Label>
+	font_size: "32sp"
+
+<box>
+	BoxLayout:
+		orientation: "vertical"
+
+		size: root.width, root.height
+		spacing: "5dp"
+		padding: "10dp"
+
+		Label:
+			text: "Sample text"
+
+		TextInput:
+
+		Button:
+			text: "submit"
+
+		Button:
+			text: "Clear"
+			size_hint: (.5, .8)
+			pos_hint: {"center_x": .5}

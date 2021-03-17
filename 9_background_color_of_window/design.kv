@@ -1,0 +1,21 @@
+<mywidget>
+	canvas.before:
+		Color:
+			rgba: (1,1,1,1,)
+		Rectangle:
+			size: self.size
+			pos: self.pos
+
+	BoxLayout:
+		orientation: "vertical"
+
+		spacing: "30dp"
+		padding: "10dp"
+
+		size: root.width, root.height
+
+		Button:
+			text: "a"
+
+		Button:
+			text: "b"

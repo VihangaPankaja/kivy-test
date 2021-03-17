@@ -1,0 +1,80 @@
+#: import utils kivy.utils
+
+<Label>
+	font_size: "32sp"
+	color: utils.get_color_from_hex('#AAAAAA')
+	canvas.before:
+		Color: 
+			rgba: utils.get_color_from_hex('#EFE1CE')
+		Rectangle:
+			pos: self.pos
+			size: self.size
+	outline_color: (0,0,0)
+	outline_width: 1
+
+
+<grid>
+
+	text1: text1
+	text2: text2
+	wait: wait
+	lbl1: lbl1
+	btn: btn
+
+	GridLayout:
+		cols: 1
+		size: root.width, root.height
+		row_force_default: True
+		col_force_default: True
+		row_default_height: 200
+		col_default_width: 1200
+
+		GridLayout:
+			cols: 2
+			row_force_default: True
+			col_force_default: True
+			row_default_height: 100
+			col_default_width: 600
+
+			Label:
+				text: "Text Field 1"
+
+			TextInput:
+				id: text1
+				multiline: False
+				background_color: utils.get_color_from_hex('#EFE1CE')
+
+			Label:
+				text: "Text Field 2"
+
+			TextInput:
+				id: text2
+				multiline: False
+				background_color: utils.get_color_from_hex('#EFE1CE')
+
+			Label:
+				text: "Waiting TIme"
+
+			TextInput:
+				id: wait
+				multiline: False
+				background_color: utils.get_color_from_hex('#EFE1CE')
+				text: "2"
+		Button:
+			id: btn
+			text: "Play"
+			font_size: "32sp"
+			background_normal: ''
+			size_hint_y: None
+			height: 100
+			background_color: utils.get_color_from_hex('#88b04b')
+			color: utils.get_color_from_hex('#00A170')
+			outline_width: .5
+			on_press: root.press()
+			on_release: root.release()
+
+		Label:
+			id: lbl1
+			text: ""
+			outline_width: 0
+			font_size: "24sp"
